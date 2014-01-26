@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>JS12</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="main.css"> 
+  </head>
+  <!-- Body Start -->
+  <body>
+  <!-- main header -->
+  <div id="main-header">
+    <h1 class="header-text remove-css"><a id='header-link' href="#">Quottr</a></h1>
+    <div class="header-sublist-container">
+        <div class="header-sublist remove-css"><a id='random-quote' href="#">Random</a></div>
+        <div class="star-container">
+          <img class="star-header" src="grey-star.png">
+          <img class="star-header" src="grey-star.png">
+          <img class="star-header" src="grey-star.png">
+          <img class="star-header" src="grey-star.png">
+          <img class="star-header" src="grey-star.png">  
+        </div> 
+    </div>
+  </div>
+  <!-- dropdown form -->
+
+
+
+  <!-- side form -->
+  <div id="input-form">
+      <form id="submit-form">
+        <div class="form-group">
+          <textarea type="text" class="form-control" id="formQuote" name="formQuote" placeholder="Enter Quote here"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="formAuthor" name="formAuthor" placeholder="Author">
+        </div>
+        <button type="submit" id="submit-button">Submit</button>
+      </form>
+      <div class="slide-out"><span>Submit Quote</span></div>
+  </div>
+
+  <!-- begin main content area -->
+  <div class="main-container">
+    <div id="content">
+
+    <div id="confirmation" class = "hidden">
+      <h2 class="remove-css confirmation-text">Are you sure you want to delete?</h2>
+      <button class="confimration-button undo">Undo</button>
+      <button class="confimration-button delete">Delete</button>
+    </div>
+
+    <div class = "filter-box hidden">
+      <span class = "remove-css author-filter">Jack Handy</span><a href="#" id="close-filter">x</a>
+    </div>
+
+      <div class="quote-box hidden" id="prototype">
+        <div class = "quote-author float-left">
+          <q class="quote">
+            Children need encouragement. So if a kid gets an answer right, tell him it was a lucky guess. That way, he develops a good, lucky feeling.
+          </q>
+          <h5 class="author"><span>-</span><a class="author-link" href="#">Jack Handy</a></h5>
+          <h6 class="submitted-date">Jan 23 2014</h6>
+        </div>
+        <div class= "rating-close float-right">
+          <a href="#" class="close-x">x</a>
+          <ul class="star-rating">
+            <li class="inline-list"><img class="star" src="grey-star.png"></li>
+            <li class="inline-list"><img class="star" src="grey-star.png"></li>
+            <li class="inline-list"><img class="star" src="grey-star.png"></li>
+            <li class="inline-list"><img class="star" src="grey-star.png"></li>
+            <li class="inline-list"><img class="star" src="grey-star.png"></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- visible base ones -->
+      <!-- quote 1 -->
+      <div class="quote-box" data-rating="s3" id="qid-1">
+        <div class = "quote-author float-left">
+          <q class="quote">
+            Children need encouragement. So if a kid gets an answer right, tell him it was a lucky guess. That way, he develops a good, lucky feeling.
+          </q>
+          <h5 class="author"><span>-</span><a class="author-link" href="#">Jack Handy</a></h5>
+          <h6 class="submitted-date">Jan 23 2014</h6>
+        </div>
+        <div class= "rating-close float-right">
+          <a href="#" class="close-x">x</a>
+          <ul class="star-rating">
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="grey-star.png"></li>
+            <li class="inline-list"><img class="star" src="grey-star.png"></li>
+          </ul>
+        </div>
+      </div>
+
+       <!-- quote 2 -->
+      <div class="quote-box" data-rating="s3" id="qid-2">
+        <div class = "quote-author float-left">
+          <q class="quote">
+            I may be drunk, Miss, but in the morning I will be sober and you will still be ugly.
+          </q>
+          <h5 class="author"><span>-</span><a class="author-link" href="#">Winston Churchill</a></h5>
+          <h6 class="submitted-date">Jan 24 2014</h6>
+        </div>
+        <div class= "rating-close float-right">
+          <a href="#" class="close-x">x</a>
+          <ul class="star-rating">
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="grey-star.png"></li>
+            <li class="inline-list"><img class="star" src="grey-star.png"></li>
+          </ul>
+        </div>
+      </div>
+
+       <!-- quote 3 -->
+      <div class="quote-box" data-rating="s4" id="qid-3">
+        <div class = "quote-author float-left">
+          <q class="quote">
+            You can always count on Americans to do the right thing - after they've tried everything else.
+          </q>
+          <h5 class="author"><span>-</span><a class="author-link" href="#">Winston Churchill</a></h5>
+          <h6 class="submitted-date">Jan 24 2014</h6>
+        </div>
+        <div class= "rating-close float-right">
+          <a href="#" class="close-x">x</a>
+          <ul class="star-rating">
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="grey-star.png"></li>
+          </ul>
+        </div>
+      </div>
+
+             <!-- quote 4 -->
+      <div class="quote-box" data-rating="s4" id="qid-4">
+        <div class = "quote-author float-left">
+          <q class="quote">
+            We become what we behold. We shape our tools and then our tools shape us.
+          </q>
+          <h5 class="author"><span>-</span><a class="author-link" href="#">Marshall McLuhan</a></h5>
+          <h6 class="submitted-date">Jan 24 2014</h6>
+        </div>
+        <div class= "rating-close float-right">
+          <a href="#" class="close-x">x</a>
+          <ul class="star-rating">
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="grey-star.png"></li>
+          </ul>
+        </div>
+      </div>
+
+                   <!-- quote 5 -->
+      <div class="quote-box" data-rating="s5" id="qid-5">
+        <div class = "quote-author float-left">
+          <q class="quote">
+            Diaper backward spells repaid. Think about it.
+          </q>
+          <h5 class="author"><span>-</span><a class="author-link" href="#">Marshall McLuhan</a></h5>
+          <h6 class="submitted-date">Jan 24 2014</h6>
+        </div>
+        <div class= "rating-close float-right">
+          <a href="#" class="close-x">x</a>
+          <ul class="star-rating">
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+          </ul>
+        </div>
+      </div>
+
+                         <!-- quote 6 -->
+      <div class="quote-box" data-rating="s4" id="qid-6">
+        <div class = "quote-author float-left">
+          <q class="quote">
+            If you go parachuting, and your parachute doesn't open, and you friends are all watching you fall, I think a funny gag would be to pretend you were swimming.
+          </q>
+          <h5 class="author"><span>-</span><a class="author-link" href="#">Jack Handy</a></h5>
+          <h6 class="submitted-date">Jan 24 2014</h6>
+        </div>
+        <div class= "rating-close float-right">
+          <a href="#" class="close-x">x</a>
+          <ul class="star-rating">
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="gold-star.png"></li>
+            <li class="inline-list"><img class="star" src="grey-star.png"></li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- Scripts -->
+  <script src="http://code.jquery.com/jquery-2.0.3.min.js" type="text/javascript"></script> 
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/additional-methods.min.js" type="text/javascript"></script>
+  <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>
